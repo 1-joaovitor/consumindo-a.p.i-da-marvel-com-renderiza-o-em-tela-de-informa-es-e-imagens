@@ -102,7 +102,7 @@ ul{
 }
 
 `
-export const Heroe =styled.li`
+export const Hero =styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;

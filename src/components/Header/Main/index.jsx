@@ -1,4 +1,4 @@
-import {ContainerCard, FlexContainer, FlexItems1, FlexItems2, FlexManipulator, Footer, Heroe, Pagination} from "./style"
+import {ContainerCard, FlexContainer, FlexItems1, FlexItems2, FlexManipulator, Hero, Pagination} from "./style"
 import { Link} from "react-router-dom"
 import { HeroesList } from "../../ComponentsHeroes/HeaderHeroes/MainHeroes/style"
 
@@ -28,11 +28,11 @@ return(
             </FlexManipulator>
             <ContainerCard>
                <HeroesList> 
-                        {currentHeroes.map ((heroe) => {return ( 
-                           <Link key={heroe.id} className="Link" to={`/herois/${heroe.id}`}>
-                              <Heroe>
-                                 <img  src={`${heroe.thumbnail.path}.${heroe.thumbnail.extension} `}alt={heroe.name}/><span>{heroe.name}</span>
-                              </Heroe>
+                        {currentHeroes.map ((hero) => {return ( 
+                           <Link key={hero.id} className="Link" to={`/herois/${hero.id}`}>
+                              <Hero>
+                                 <img  src={`${hero.thumbnail.path}.${hero.thumbnail.extension} `}alt={hero.name}/><span>{hero.name}</span>
+                              </Hero>
                            </Link>)})}
                </HeroesList>
             </ContainerCard>       

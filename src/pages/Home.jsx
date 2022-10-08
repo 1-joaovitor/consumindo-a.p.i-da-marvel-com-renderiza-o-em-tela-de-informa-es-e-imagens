@@ -14,7 +14,7 @@ export const Home = () =>{
     const startIndex = currentPage * itemsPerPage
     const endIndex = startIndex + itemsPerPage
     const [search, setSearch] = useState ('')
-    const filtering = HeroesMarvel.filter((filtro) =>  { return filtro.name.toUpperCase().includes(search.toUpperCase())})
+    const filtering = HeroesMarvel.filter((filter) =>  { return filter.name.toUpperCase().includes(search.toUpperCase())})
     const currentHeroes = filtering.slice(startIndex, endIndex)
 
 
