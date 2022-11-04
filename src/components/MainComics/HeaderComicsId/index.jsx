@@ -1,14 +1,11 @@
- 
-import { Link} from 'react-router-dom'
-import { ContainerTitle,ContainerHeader, ContainerRouter } from '../../Header/style'
-import { ContainerAbout,ContainerDescription, ContainerDetails, ContainerImg, ContainerNameHeroes, TextAbout} from './style'
+import { Link } from "react-router-dom"
+import { ContainerAbout, ContainerDescription, ContainerDetails, ContainerImg, ContainerNameHeroes, TextAbout } from "../../ComponentsHeroes/HeaderHeroes/style"
+import { ContainerHeader, ContainerRouter, ContainerTitle } from "../../Header/style"
 
-
-export const HeaderHeroes = ({person}) =>{
-
+export const HeaderComicsId =({Comic})=>{
 return(
     <>
-    <ContainerHeader width={'100%'} >
+<ContainerHeader>
             <ContainerTitle>
                 <h1>MARVEL BOOK</h1>
             </ContainerTitle>
@@ -18,27 +15,26 @@ return(
     </ContainerHeader>
         <ContainerAbout>
             <TextAbout>
-                <h1>{person.name}</h1>
+                <h1>{Comic.title}</h1>
                 <p></p>
             </TextAbout>
         </ContainerAbout>
         <ContainerDescription>
                 <ContainerImg >
-                    <img src={`${person?.thumbnail?.path}.${person?.thumbnail?.extension} `} alt={person?.name}/>
+                    <img src={`${Comic?.thumbnail?.path}.${Comic?.thumbnail?.extension} `} alt={Comic?.title}/>
                 </ContainerImg>
                 <ContainerDetails>
                     <h1>
-                     {`${person.description}`.length== 0 ? 'Este personagem não conta com descrição': `${person.description}`}
+                     {`${Comic.description}`.length== 0 ? 'Este quadrinho não conta com descrição': `${Comic.description}`}
                     </h1>
                     <p></p>
                 </ContainerDetails>
                 <ContainerNameHeroes>
                     <p>
-                     {person.name}
+                     {Comic.title}
                     </p>
                 </ContainerNameHeroes>
         </ContainerDescription>
-       
-        </>
+</>
 )
 }

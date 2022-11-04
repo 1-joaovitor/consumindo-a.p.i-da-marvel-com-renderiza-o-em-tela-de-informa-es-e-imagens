@@ -1,16 +1,18 @@
+import { Link } from "react-router-dom"
 import {ContainerHeader, ContainerHeader2, ContainerRouter, ContainerTitle, Flex } from "./style"
 
 export const Header = () =>{
 
  return(
         <> 
-      <ContainerHeader>
+      <ContainerHeader height={'5rem'}>
           <ContainerTitle>
             <h1>MARVEL BOOK</h1>
           </ContainerTitle>
 
           <ContainerRouter> 
-            <p>HOME</p>
+          <Link className="linkComics" to='/'><p>HOME</p></Link> 
+           <Link className="linkComics" to='/comics'><p>COMICS</p></Link> 
           </ContainerRouter>
       </ContainerHeader>
 

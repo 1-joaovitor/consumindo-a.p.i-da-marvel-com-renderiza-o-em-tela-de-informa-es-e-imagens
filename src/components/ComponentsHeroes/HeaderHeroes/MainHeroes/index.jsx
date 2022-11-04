@@ -40,7 +40,7 @@ export const MainHeroes = ({person}) =>{
                   </Hero>   
             </HeroesList>
         </ContainerBiography>
-            <Footer/>
+            
         </>
      
     )
